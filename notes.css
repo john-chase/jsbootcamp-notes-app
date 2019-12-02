@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Raleway;
+    background-color: #c9d5c7;
+    padding: .5rem;
+}
+h1 {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 300;
+    color: #2d802d
+}
+h1 span{
+    font-weight: 700;
+}
+h2 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.content {
+    background-: #fff;
+    margin: 0;
+    padding: 0;
+}
+#actions {
+    border-top: 1px solid black;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+form {
+    border-top: 1px solid black;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+input {
+    margin-left: .5rem;
+    vertical-align: baseline;
+}
+#hideCompleted {
+    margin-right: .25rem;
+    vertical-align: baseline;
+}
+#text {
+    margin-top:30px;
+}
+label {
+    margin-right: .5rem;
+}
+button {
+    height: 20px; 
+    vertical-align: baseline;
+}
+#actions-top {
+    border-bottom: 1px solid black;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+}
+#actions-bottom {
+    border-top: 1px solid black;
+    margin: 1rem 0;
+    padding-top: 1rem;
+}
+.footer {
+    text-align: center;
+    font-size: smaller;
+    margin-top: 2rem;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="notes.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Notes<span>App</span></h1>
+        <h2>Take notes and never forget</h2>
+    </header>
+   <div class="content">
+        <div id="actions-top">
+            <label for="search-text">
+                Search: <input type="text" id="search-text" placeholder="Filter notes..." />
+            </label>
+            <label for="filter">
+                Sort:
+                <select class="filter">
+                    <option value="">Choose an option...</option>
+                    <option value="lastEdited">By last edited</option>
+                    <option value="recentlyCreated">By recently created</option>
+                    <option value="alpha">Alphabetically</option>
+                </select>
+            </label>        
+        </div>    
+        <div id="notes"><!--notes generated here--></div>
+        <div id="actions-bottom">
+            <button id="create-note">Add Note</button>
+        </div>
+   </div>
+    <p class="footer">This application was created by John Chase</p>
+    <script src="uuid.js"></script>
+    <script src="notes-funcs.js"></script>
+    <script src="notes-app.js"></script>
+</body>
+</html>
