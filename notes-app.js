@@ -10,14 +10,15 @@ const filters = {
 
 //create
 document.querySelector('#create-note').addEventListener('click', function(e) {
-    console.log(e.target)
+    const id = uuidv4()
     notes.push({
-        id: uuidv4(),
+        id,
         title: '',
         body: ''
     })
     saveNotes(notes)
-    renderNotes(notes, filters)
+    location.assign(`/edit.html#${id}`)
+    console.log(id)
 })
 
 //read - initial note generation
