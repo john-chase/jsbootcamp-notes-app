@@ -71,3 +71,9 @@ a {
     font-size: smaller;
     margin-top: 2rem;
 }
+#edited {
+    font-size: .6rem;
+}
+#note-title {
+    margin-left: 0;
+}

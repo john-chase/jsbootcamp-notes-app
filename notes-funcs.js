@@ -37,9 +37,47 @@ const generateNoteDOM = function(note) {
     return divElem
 }
 
+//sort notes
+const sortNotes = function(notes, sort) {
+    if(sort === 'lastEdited') {
+        return notes.sort(function(a,b) {
+            if(a.updatedAt > b.updatedAt) {
+                return -1
+            } else if (a.updatedAt < b.updatedAt) {
+                return 1
+            } else {
+                return 0
+            }
+        })
+    } else if(sort === 'recentlyCreated') {
+        return notes.sort(function(a,b) {
+            if(a.createdAt > b.createdAt) {
+                return -1
+            } else if (a.createdAt < b.createdAt) {
+                return 1
+            } else {
+                return 0
+            }
+        })
+    } else if(sort === 'alpha') {
+        return notes.sort(function(a,b) {
+            if(a.title.toLowerCase() < b.title.toLowerCase()) {
+                return -1
+            } else if (a.title.toLowerCase() > b.title.toLowerCase()) {
+                return 1
+            } else {
+                return 0
+            }
+        })
+    } else {
+        return notes //bad option, return unsorted array
+    }
+}
+
 //render app notes
 const renderNotes = function(notes, filters) {
-    const filteredNotes = notes.filter(function(note){
+    const newNotes = sortNotes(notes, filters.sortBy)
+    const filteredNotes = newNotes.filter(function(note){
         return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
     }) 
     document.querySelector('#notes').innerHTML=''
@@ -52,4 +90,9 @@ const renderNotes = function(notes, filters) {
 //save the notes to LS
 const saveNotes = function(notes) {
     localStorage.setItem('notes', JSON.stringify(notes))
+}
+
+//generate last updated
+const lastUpdated = function(timeStamp) {
+    return `Last edited: ${moment(timeStamp).fromNow()}`
 }
