@@ -1,12 +1,22 @@
+'use strict'
+
 //check for existing notes in local storage
 const getSavedNotes = () => {
     const notesJSON = localStorage.getItem('notes')
-    if(notesJSON !== null) {
-        return JSON.parse(notesJSON)
-    } else {
+    // if(notesJSON !== null) {
+    //     return JSON.parse(notesJSON)
+    // } else {
+    //     return []
+    // }
+    try {
+        return notesJSON ? JSON.parse(notesJSON) : []
+    } catch(err) {
         return []
     }
 }
+
+//save the notes to LS
+const saveNotes = (notes) => localStorage.setItem('notes', JSON.stringify(notes))
 
 //remove a note 
 const removeNote = (id) => {
@@ -83,16 +93,13 @@ const renderNotes = (notes, filters) => {
         const noteElem = generateNoteDOM(note)
         document.querySelector('#notes').appendChild(noteElem)
     })
-    //ENHANCEMENT
+    //ENHANCEMENT - EMPTY NOTES PLACEHOLDER
     if(notes.length === 0) {
         const noteElem = document.createElement('a')
         noteElem.textContent = 'No notes found. Remove filter criteria or use the Add Note button to create one.'
         document.querySelector('#notes').appendChild(noteElem)
     }
 }
-
-//save the notes to LS
-const saveNotes = (notes) => localStorage.setItem('notes', JSON.stringify(notes))
 
 //generate last updated
 const lastUpdated = (timeStamp) => `Last edited: ${moment(timeStamp).fromNow()}`

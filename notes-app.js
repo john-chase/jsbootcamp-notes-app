@@ -1,4 +1,7 @@
+'use strict'
+
 let notes = getSavedNotes()
+//Object template 
 // const notes = [{
 //         id: uuidv4(), 
 //         title: 'My next trip',
