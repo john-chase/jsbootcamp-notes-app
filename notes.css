@@ -4,11 +4,11 @@
 }
 body {
     font-family: Raleway;
-    background-color: #c9d5c7;
+    background-color:white;
 }
 header {
-    background-color: #2d802d;
-    padding: .25rem;
+    background-color: #247e24;
+    padding: .25rem .5rem;
 }
 h1 {
     text-align: center;
@@ -23,15 +23,10 @@ h2 {
     font-weight: 500;
     color: white;
 }
-.content {
-    background-: #fff;
-    margin: 0;
-    padding: .25rem;
-}
 #actions {
-    border-top: 1px solid black;
-    margin-top: 1rem;
-    padding-top: 1rem;
+    padding: .5rem;
+    background-color: #38b938;
+    font-size: .8rem;;
 }
 form {
     border-top: 1px solid black;
@@ -39,7 +34,6 @@ form {
     padding-top: 1rem;
 }
 input {
-    margin-left: .5rem;
     vertical-align: baseline;
 }
 #hideCompleted {
@@ -55,19 +49,21 @@ label {
 button {
     height: 20px; 
     vertical-align: baseline;
+    margin-right: 1rem;
 }
+#notes>div>button {
+    margin: 0 .5rem;
+}
+#notes>div>button {
+    margin-right: .25rem;  
+} 
 a {
     text-decoration: none;
+    color: #2d802d;
 }
-#actions-top {
-    border-bottom: 1px solid black;
-    margin: 1rem 0;
-    padding-bottom: 1rem;
-}
-#actions-bottom {
-    border-top: 1px solid black;
-    margin: 1rem 0;
-    padding-top: 1rem;
+a:hover {
+    color: #184618;
+    text-decoration: underline;
 }
 .footer {
     text-align: center;
@@ -89,4 +85,10 @@ a {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+#notes>div:nth-child(even){
+    background-color: white;
+}
+#notes>div:nth-child(odd){
+    background-color: #d5f3d0;
 }
