@@ -26,7 +26,7 @@ document.querySelector('#create-note').addEventListener('click', (e) => {
         updatedAt: now
     })
     saveNotes(notes)
-    location.assign(`/edit.html#${id}`)
+    location.assign(`edit.html#${id}`)
 })
 
 //read - initial note generation

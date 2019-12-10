@@ -5,13 +5,15 @@
 body {
     font-family: Raleway;
     background-color: #c9d5c7;
-    padding: .5rem;
+}
+header {
+    background-color: #2d802d;
+    padding: .25rem;
 }
 h1 {
-    margin-top: 1rem;
     text-align: center;
     font-weight: 300;
-    color: #2d802d
+    color: white;
 }
 h1 span{
     font-weight: 700;
@@ -19,11 +21,12 @@ h1 span{
 h2 {
     margin-bottom: 1rem;
     font-weight: 500;
+    color: white;
 }
 .content {
     background-: #fff;
     margin: 0;
-    padding: 0;
+    padding: .25rem;
 }
 #actions {
     border-top: 1px solid black;
@@ -76,4 +79,14 @@ a {
 }
 #note-title {
     margin-left: 0;
+}
+.footer {
+    text-align: center;
+    font-size: .8rem;
+    padding: 2rem 0;
+    background-color: #2d802d;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

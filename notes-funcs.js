@@ -40,7 +40,7 @@ const generateNoteDOM = (note) => {
         renderNotes(notes, filters)
     })
     noteElem.textContent = note.title || 'Unnamed note...'
-    noteElem.setAttribute('href', `/edit.html#${note.id}`)
+    noteElem.setAttribute('href', `edit.html#${note.id}`)
     divElem.appendChild(noteElem)
     return divElem
 }

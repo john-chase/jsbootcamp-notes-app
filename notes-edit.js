@@ -12,7 +12,7 @@ let note = notes.find(function(note) {
     return note.id === id
 })
 if(!note) { //note === undefined
-    location.assign('/index.html')
+    location.assign('index.html')
 }
 
 titleElem.value = note.title
@@ -37,11 +37,11 @@ bodyElem.addEventListener('input', function(e) {
 removeBtn.addEventListener('click', function(e) {
     removeNote(note.id)
     saveNotes(notes)
-    location.assign('/index.html')    
+    location.assign('index.html')    
 })
 
 doneBtn.addEventListener('click', function(e) {
-    location.assign('/index.html')    
+    location.assign('index.html')    
 })
 
 //update LS
@@ -54,7 +54,7 @@ window.addEventListener('storage', function(e) {
         return note.id === id
     })
     if(!note) {
-        location.assign('/index.html')
+        location.assign('index.html')
     }
     titleElem.value = note.title
     bodyElem.value = note.body 
