@@ -57,6 +57,9 @@ button {
 #notes>div>button {
     margin-right: .25rem;  
 } 
+#notes>a {
+    margin-left: .5rem;
+}
 a {
     text-decoration: none;
     color: #2d802d;
