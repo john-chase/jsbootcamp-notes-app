@@ -5,25 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Notes App - Editing</title>
-    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/edit.css">
+    <link rel="icon" type="images/png" sizes="16x16" href="favicon-16x16.png">    
 </head>
 <body>
     <header>
         <h1 id="title">Notes<span>App</span></h1>
         <h2>Edit Note</h2>
     </header>
+    <div id="actions">
+        <button id="done">Done</button>
+        <button id="remove-note">Remove note (cancel)</button>
+    </div>
     <div class="content">
         <label for="note-title">Title:</label><br />
         <input type="text" id="note-title" placeholder="Note title"><br/><br/>
         <label for="note-body">Note:</label><br />
-        <textarea id="note-body" cols="50" rows="6" placeholder="Enter note text..."></textarea><br/>
-        <p id="edited"></p><br/>
-        <button id="done">Done</button>
-        <button id="remove-note">Remove note</button>
+        <textarea id="note-body" rows="6" placeholder="Enter note text..."></textarea><br/>
+        <p id="edited"></p>
     </div>
     <p class="footer">This application was created by John Chase</p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
-    <script src="notes-funcs.js"></script>
-    <script src="notes-edit.js"></script>
+    <script src="./scripts/edit-bundle.js"></script>
 </body>
 </html>

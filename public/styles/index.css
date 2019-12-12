@@ -1,0 +1,23 @@
+#notes>div>button {
+    margin: 0 .5rem;
+}
+#notes>div>button {
+    margin: .2rem .25rem .2rem .75rem;  
+    padding: 3px 10px;
+} 
+#notes>a {
+    margin-left: .5rem;
+}
+#notes>div:nth-child(even){
+    background-color: white;
+}
+#notes>div:nth-child(odd){
+    background-color: #d5f3d0;
+}
+input {
+    width: 200px;
+}
+label {
+    margin-left: .5rem;
+    font-weight: bold !important;
+}
