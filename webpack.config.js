@@ -1,15 +1,7 @@
 const path = require('path')
-const webpack = require('webpack')
-const isProduction = process.env.NODE_ENV === 'production'
-let plugins = []
-if(isProduction) {
-    plugins.push(
-        new webpack.IgnorePlugin({
-            resourceRegExp: /^\.\/locale$/,
-            contextRegExp: /moment$/
-        })        
-    )
-}
+
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
+
 module.exports = {
     entry: {
         index: [
@@ -25,7 +17,12 @@ module.exports = {
         path: path.resolve(__dirname, 'public/scripts'),
         filename: '[name]-bundle.js'
     },
-    plugins: plugins,
+    plugins: [
+        new MomentLocalesPlugin(),
+        new MomentLocalesPlugin({
+            localesToKeep: ['es-us'],
+        }),
+    ],
     module: {
         rules: 
         [{
