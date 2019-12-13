@@ -8,6 +8,9 @@
 #notes>a {
     margin-left: .5rem;
 }
+#notes>a:hover {
+    text-decoration: none;
+}
 #notes>div:nth-child(even){
     background-color: white;
 }
